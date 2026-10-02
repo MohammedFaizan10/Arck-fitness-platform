@@ -4,17 +4,17 @@
     "api-server": {
       "root": "artifacts/api-server",
       "framework": "express",
-      "installCommand": "npm install -g pnpm@latest && pnpm install --shamefully-hoist --no-frozen-lockfile"
+      "installCommand": "corepack enable && NODE_OPTIONS=--no-experimental-fetch pnpm install --shamefully-hoist --no-frozen-lockfile"
     },
     "mockup-sandbox": {
       "root": "artifacts/mockup-sandbox",
       "framework": "vite",
-      "installCommand": "npm install -g pnpm@latest && pnpm install --shamefully-hoist --no-frozen-lockfile"
+      "installCommand": "corepack enable && NODE_OPTIONS=--no-experimental-fetch pnpm install --shamefully-hoist --no-frozen-lockfile"
     },
     "arckfit-fitness": {
       "root": "artifacts/repfi-fitness",
       "framework": "vite",
-      "installCommand": "npm install -g pnpm@latest && pnpm install --shamefully-hoist --no-frozen-lockfile"
+      "installCommand": "corepack enable && NODE_OPTIONS=--no-experimental-fetch pnpm install --shamefully-hoist --no-frozen-lockfile"
     }
   },
   "rewrites": [
