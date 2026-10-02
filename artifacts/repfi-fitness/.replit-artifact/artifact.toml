@@ -1,9 +1,9 @@
 kind = "web"
 previewPath = "/"
-title = "RepFi Fitness Platform"
+title = "ArckFit Fitness Platform"
 description = "A responsive fitness management website demo connecting gym members, trainers, and gym owners. Includes workout tracking, progress, nutrition, trainer discovery, a simulated AI coach, memberships, and gym administration using fictional local data and demo interactions."
 version = "1.0.0"
-id = "artifacts/repfi-fitness"
+id = "artifacts/arckfit-fitness"
 router = "path"
 
 [[services]]
@@ -12,12 +12,12 @@ paths = [ "/" ]
 localPort = 22946
 
 [services.development]
-run = "pnpm --filter @workspace/repfi-fitness run dev"
+run = "pnpm --filter @workspace/arckfit-fitness run dev"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/repfi-fitness", "run", "build" ]
+build = [ "pnpm", "--filter", "@workspace/arckfit-fitness", "run", "build" ]
 serve = "static"
-publicDir = "artifacts/repfi-fitness/dist/public"
+publicDir = "artifacts/arckfit-fitness/dist/public"
 
 [[services.production.rewrites]]
 from = "/*"

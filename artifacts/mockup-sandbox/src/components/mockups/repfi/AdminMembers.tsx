@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { ArrowLeft, Check, ChevronDown, MoreHorizontal, Plus, Search, SlidersHorizontal, UserRound, Users } from "lucide-react";
-import { AppShell, Metric, Modal, SectionHeading, SearchBox, go } from "./_shared/RepFiShared";
+import { AppShell, Metric, Modal, SectionHeading, SearchBox, go } from "./_shared/ArckFitShared";
 import "./_group.css";
 
 type Member = {
@@ -55,14 +55,14 @@ export function AdminMembers() {
   };
 
   return (
-    <AppShell owner title="Members" eyebrow="RepFit Fitness Center · Admin">
+    <AppShell owner title="Members" eyebrow="ArckFitt Fitness Center · Admin">
       <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
         <div>
           <button onClick={() => go("OwnerDashboard")} className="mb-4 flex items-center gap-2 text-xs font-bold text-[#0f6268] hover:text-[#20334a]">
             <ArrowLeft size={14} /> Back to overview
           </button>
           <p className="text-xs font-bold uppercase tracking-[.18em] text-[#0f6268]">Member directory</p>
-          <h2 className="repfi-display mt-2 text-3xl font-bold tracking-[-.05em] sm:text-4xl">Know every member.</h2>
+          <h2 className="arckfit-display mt-2 text-3xl font-bold tracking-[-.05em] sm:text-4xl">Know every member.</h2>
           <p className="mt-2 max-w-xl text-sm text-[#70808c]">Search your community, review attendance, and keep every member moving forward.</p>
         </div>
         <button onClick={() => { setAddOpen(true); setAdded(false); }} className="flex items-center justify-center gap-2 rounded-xl bg-[#20334a] px-5 py-3 text-sm font-bold text-white hover:bg-[#0f6268]">
@@ -76,7 +76,7 @@ export function AdminMembers() {
         <Metric label="Needs attention" value="34" detail="Members below 50% attendance" accent="orange" />
       </div>
 
-      <section className="repfi-card mt-8 overflow-hidden">
+      <section className="arckfit-card mt-8 overflow-hidden">
         <div className="border-b border-[#dfe7e3] p-5 sm:p-6">
           <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
             <SectionHeading kicker="Live directory" title={`${filtered.length} members showing`} />
