@@ -3,15 +3,18 @@
   "services": {
     "api-server": {
       "root": "artifacts/api-server",
-      "framework": "express"
+      "framework": "express",
+      "installCommand": "npm install -g pnpm && pnpm install --shamefully-hoist"
     },
     "mockup-sandbox": {
       "root": "artifacts/mockup-sandbox",
-      "framework": "vite"
+      "framework": "vite",
+      "installCommand": "npm install -g pnpm && pnpm install --shamefully-hoist"
     },
     "arckfit-fitness": {
       "root": "artifacts/repfi-fitness",
-      "framework": "vite"
+      "framework": "vite",
+      "installCommand": "npm install -g pnpm && pnpm install --shamefully-hoist"
     }
   },
   "rewrites": [
