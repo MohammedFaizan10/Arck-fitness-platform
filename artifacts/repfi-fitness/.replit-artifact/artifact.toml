@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "RepFi Fitness Platform"
+description = "A responsive fitness management website demo connecting gym members, trainers, and gym owners. Includes workout tracking, progress, nutrition, trainer discovery, a simulated AI coach, memberships, and gym administration using fictional local data and demo interactions."
+version = "1.0.0"
+id = "artifacts/repfi-fitness"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22946
+
+[services.development]
+run = "pnpm --filter @workspace/repfi-fitness run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/repfi-fitness", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/repfi-fitness/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22946"
+BASE_PATH = "/"

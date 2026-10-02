@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --repfi-ink: #16202a;
+  --repfi-muted: #70808c;
+  --repfi-paper: #f5f7f4;
+  --repfi-panel: #fbfcfa;
+  --repfi-line: #dfe7e3;
+  --repfi-lime: #d7f35c;
+  --repfi-lime-deep: #9bb928;
+  --repfi-teal: #0f6268;
+  --repfi-teal-soft: #e1f0ed;
+  --repfi-orange: #f39a64;
+  --repfi-orange-soft: #fff0e7;
+  --repfi-navy: #20334a;
+}
+
+.repfi-root { font-family: 'DM Sans', sans-serif; color: var(--repfi-ink); background: var(--repfi-paper); }
+.repfi-display { font-family: 'Space Grotesk', sans-serif; }
+.repfi-grid-bg {
+  background-image: linear-gradient(rgba(15,98,104,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(15,98,104,.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.repfi-noise { position: relative; overflow: hidden; }
+.repfi-noise::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.055; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E"); mix-blend-mode:multiply; }
+.repfi-card { background: var(--repfi-panel); border: 1px solid var(--repfi-line); border-radius: 22px; box-shadow: 0 14px 32px rgba(26,58,57,.055); }
+.repfi-card.repfi-dark { background: #20334a; }
+.repfi-card.text-white { background: #20334a; }
+.repfi-hover { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.repfi-hover:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(26,58,57,.12); border-color: rgba(15,98,104,.28); }
+@keyframes repfi-rise { from { opacity:0; transform:translateY(14px) } to { opacity:1; transform:translateY(0) } }
+@keyframes repfi-pulse { 0%,100% { transform:scale(1); opacity:.78 } 50% { transform:scale(1.06); opacity:1 } }
+.repfi-rise { animation: repfi-rise .55s ease both; }
+.repfi-rise-1 { animation-delay: .08s; } .repfi-rise-2 { animation-delay: .16s; } .repfi-rise-3 { animation-delay: .24s; }
+.repfi-pulse { animation: repfi-pulse 2.2s ease-in-out infinite; }
+@media (max-width: 760px) { .repfi-card { border-radius: 18px; } }
